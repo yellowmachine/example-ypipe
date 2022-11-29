@@ -1,0 +1,22 @@
+{
+  "name": "example-yellow-machine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "print": "node print.js",
+    "test": "node index.js",
+    "tap": "tap --no-coverage-report --no-check-coverage ./tests/*.test.js"
+  },
+  "author": "yellow",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "node-docker-api": "^1.1.22",
+    "npm-commands": "^1.1.0",
+    "tap": "^16.3.0",
+    "wait-on": "^6.0.1"
+  }
+}
