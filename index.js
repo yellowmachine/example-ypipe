@@ -1,10 +1,9 @@
-const {compile, w, SHOW_QUIT_MESSAGE} = require("ypipe")
+const {compile} = require("ypipe")
+const { w } = require("ypipe-watch");
 const npm = require('npm-commands')
 const {docker} = require('./docker')
 const {dgraph} = require('./dgraph')
 const config = require("./config")
-
-SHOW_QUIT_MESSAGE.v = true
 
 function test(){
     npm().run('tap');
