@@ -1,6 +1,6 @@
 # example testing dgraph schemas
 
-Based on [ypipe pipeline](https://github.com/yellowmachine/ypipe#readme)
+Based on [ypipe](https://github.com/yellowmachine/ypipe#readme)
 
 ```js
 const {compile} = require("ypipe")
@@ -14,7 +14,7 @@ function test(){
     npm().run('tap');
 }
 
-const {up, down} = docker({name: "my-container-dgraph-v2.9", 
+const {up, down} = docker({name: "my-container-dgraph", 
                            image: "dgraph/standalone:master", 
                            port: "8080"
                         })
