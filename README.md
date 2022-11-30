@@ -6,15 +6,15 @@ Based on [ypipe](https://github.com/yellowmachine/ypipe#readme)
 const {compile} = require("ypipe")
 const { w } = require("ypipe-watch");
 const npm = require('npm-commands')
-const {docker} = require('./docker')
-const {dgraph} = require('./dgraph')
+const {docker} = require('ypipe-docker')
+const {dgraph} = require('ypipe-dgraph')
 const config = require("./config")
 
 function test(){
     npm().run('tap');
 }
 
-const {up, down} = docker({name: "my-container-dgraph", 
+const {up, down} = docker({name: "my-container-dgraph-v2.9", 
                            image: "dgraph/standalone:master", 
                            port: "8080"
                         })
