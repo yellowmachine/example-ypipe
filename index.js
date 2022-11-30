@@ -1,8 +1,8 @@
 const {compile} = require("ypipe")
 const { w } = require("ypipe-watch");
 const npm = require('npm-commands')
-const {docker} = require('./docker')
-const {dgraph} = require('./dgraph')
+const {docker} = require('ypipe-docker')
+const {dgraph} = require('ypipe-dgraph')
 const config = require("./config")
 
 function test(){
