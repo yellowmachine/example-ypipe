@@ -1,4 +1,4 @@
-const { quote, gql } = require('../dgraph')
+const { quote, gql } = require('ypipe-dgraph')
 
 const ADMIN = quote("ADMIN")
 
