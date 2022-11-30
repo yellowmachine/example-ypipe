@@ -3,19 +3,18 @@
 Based on [ypipe pipeline](https://github.com/yellowmachine/ypipe#readme)
 
 ```js
-const {compile, w, SHOW_QUIT_MESSAGE} = require("ypipe")
+const {compile} = require("ypipe")
+const { w } = require("ypipe-watch");
 const npm = require('npm-commands')
 const {docker} = require('./docker')
 const {dgraph} = require('./dgraph')
 const config = require("./config")
 
-SHOW_QUIT_MESSAGE.v = true
-
 function test(){
     npm().run('tap');
 }
 
-const {up, down} = docker({name: "my-container-dgraph-v17", 
+const {up, down} = docker({name: "my-container-dgraph-v2.9", 
                            image: "dgraph/standalone:master", 
                            port: "8080"
                         })
