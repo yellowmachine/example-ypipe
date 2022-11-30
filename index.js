@@ -10,7 +10,7 @@ function test(){
     npm().run('tap');
 }
 
-const {up, down} = docker({name: "my-container-dgraph-v17", 
+const {up, down} = docker({name: "my-container-dgraph-v2.9", 
                            image: "dgraph/standalone:master", 
                            port: "8080"
                         })

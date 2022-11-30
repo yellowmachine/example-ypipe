@@ -60,7 +60,7 @@ function dgraph(config){
             if(name.endsWith(".js")) data = requireUncached(name)
             else data = await loadSchema(name)
         }catch(err){
-            console.log(err)
+            console.log('dgraph error', err)
             throw err
         }
         data = data + config.schemaFooter(config)
