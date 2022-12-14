@@ -35,3 +35,13 @@ async function main() {
 
 main()
 ```
+
+You can use Dockerfile:
+
+```bash
+docker pull dgraph/standalone:master
+docker build -t example .
+docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock -v ${PWD}:/app --network="host" example bash
+npm i
+npm run test
+```
